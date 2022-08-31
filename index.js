@@ -14,3 +14,16 @@ console.log(found[0]);
 console.log(found[1]);
 console.log(found[2]);
 };
+
+/* ################# Aula 02 ################# */
+// (...(...(...)))(...)
+//  $1  $2  $3     $4 ~> Grupos
+const { texto } = require('../aula 00/base');
+const regExp1 = /João| Maria/gi;
+
+// console.log(texto);
+// console.log(texto.match(regExp1));
+// console.log(texto.replace(/(João|Maria)/gi, '<b>$1</b>'));
+console.log(texto.replace(/(João|Maria)/gi, function(input) {
+  return ' ####### ' + input.toUpperCase() + ' ####### ';
+}));
