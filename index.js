@@ -102,3 +102,11 @@ const { cpf2 } = require('.base');
 const cpf = '654.864.841-68';
 const cpfRegExp = /^(\d{3}\.){2}\d{3}\-\d{2}$/gm;
 console.log(cpf2.match(cpfRegExp));
+
+/* ################# Aula 07 ################# */
+//1$ 2$ 3$ <~ Retrovisores
+const { html2 } = require('../aula 00/base');
+
+//console.log(html2)
+//console.log(html2.match(/<(\w+)[\s\S]*?>[\s\S]*?<\/\1>/g));
+console.log(html2.replace(/(<(\w+)(?:[\s\S]*?)>)([\s\S]*?)(<\/\2>)/g, '$1 HAH $3 HAHA $4'));

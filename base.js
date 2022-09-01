@@ -57,6 +57,13 @@ const cpf2 = `654.864.841-68
 168.494.165-49
 084.140.781-91`;
 
+/* ################# Aula 07 ################# */
+const html2 = `<p 
+data-teste='teste' 
+class="teste">
+Olá mundo</p> 
+<p>Olá mundo</p> <div>Sou uma div</div>`;
+
 module.exports = {
   texto,
   arquivos,
@@ -64,5 +71,6 @@ module.exports = {
   alfabeto,
   cpf,
   ip,
-  cpf2
+  cpf2,
+  html2
 }
