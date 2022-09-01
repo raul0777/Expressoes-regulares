@@ -38,7 +38,7 @@ console.log(texto.replace(/(João|Maria)/gi, function(input) {
 // {,10} no máximo 10
 // {5,10} de 5 a 10
 
-const { texto, arquivos } = require('../aula 00/base');
+const { texto, arquivos } = require('./base');
 /* console.log(texto);
 const regExp1 = /Jo+ão+/gi
 console.log(texto.match(regExp1)); */
@@ -56,8 +56,27 @@ for (const arquivo of arquivos) {
 /* ################# Aula 04 ################# */
 // <.+>.+<\/.+>
 
-const { html } = require('../aula 00/base');
+const { html } = require('./base');
 
 console.log(html);
 console.log(html.match(/<.+>.+<\/.+>/g)); //greedy
 console.log(html.match(/<.+?>.+?<\/.+?>/g)); //non-greedy
+
+/* ################# Aula 05 ################# */
+//[abc] ~> Conjunto
+//[^Tudo menos isso] ~> Negação
+//[0-9] ou [a-z] ~> Range
+
+const { alfabeto } = require('./base');
+
+console.log(alfabeto);
+console.log(alfabeto.match(/[0-9]+/g)); //Numérico
+console.log(alfabeto.match(/[A-Z]+/g)); //alfabeto
+console.log(alfabeto.match(/[^a-zA-Z0-9]/g)); //Negação
+console.log(alfabeto.match(/[\u00a0-\u00BA]+/g)); //Unicode
+console.log(alfabeto.match(/\w+/g));
+console.log(alfabeto.match(/\W/g)); //Negação
+console.log(alfabeto.match(/\d+/g)); //Numérico
+console.log(alfabeto.match(/\D+/g)); //Negação
+console.log(alfabeto.match(/\s+/g)); //espaços em branco
+console.log(alfabeto.match(/\S+/g)); //Negação
