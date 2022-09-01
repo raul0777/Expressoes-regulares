@@ -52,3 +52,12 @@ for (const arquivo of arquivos) {
 
   console.log(arquivo, valido);
 }
+
+/* ################# Aula 04 ################# */
+// <.+>.+<\/.+>
+
+const { html } = require('../aula 00/base');
+
+console.log(html);
+console.log(html.match(/<.+>.+<\/.+>/g)); //greedy
+console.log(html.match(/<.+?>.+?<\/.+?>/g)); //non-greedy

@@ -24,7 +24,12 @@ const arquivos = [
   'lista de compras.txt',
 ];
 
+/* ################# Aula 04 ################# */
+
+const html = '<p>Olá mundo</p> <p> Olá de novo</p> <div> Sou a div </div>';
+
 module.exports = {
   texto,
-  arquivos
+  arquivos,
+  html
 }
