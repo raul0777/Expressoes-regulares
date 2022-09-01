@@ -25,15 +25,35 @@ const arquivos = [
 ];
 
 /* ################# Aula 04 ################# */
+const html = '<p>Olá mundo</p> <p> Olá de novo</p> <div> Sou a div </div>';
 
+/* ################# Aula 05 ################# */
 const alfabeto =
 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz ©¡ 0123456789 ¡';
 
-const html = '<p>Olá mundo</p> <p> Olá de novo</p> <div> Sou a div </div>';
+/* ################# Exercício ################# */
+const cpf = `
+  Os CPF's são:
+
+  654.864.841-68 498.461.648-46 168.494.165-49
+  
+  084.140.781-91
+
+`;
+
+const ip = `
+  Os IP's são:
+  0.0.0.0
+  192.168.0.25
+  10.10.5.12
+  255.255.255.255
+`;
 
 module.exports = {
   texto,
   arquivos,
   html,
-  alfabeto
+  alfabeto,
+  cpf,
+  ip
 }
