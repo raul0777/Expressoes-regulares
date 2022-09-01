@@ -82,12 +82,23 @@ console.log(alfabeto.match(/\s+/g)); //espaços em branco
 console.log(alfabeto.match(/\S+/g)); //Negação
 
 /* ################# Exercício ################# */
-const { cpf, ip } = require('../aula 00/base')
+const { cpf, ip } = require('./base')
 const ipRegExp = /((25[0-5]|2[0-4][0-9]|1\d{2}|[1-9]\d|\d)(\.)){3}(25[0-5]|2[0-4][0-9]|1\d{2}|[1-9]\d|\d)/g;
-
 
 console.log(cpf.match(/[0-9]{3}\.[0-9]{3}\.[0-9]{3}\-[0-9]{2}/g));
 console.log(cpf.match(/\d{3}\.\d{3}\.\d{3}\-\d{2}/g));
 console.log(cpf.match(/(\d{3}\.){2}\d{3}\-\d{2}/g));
 
 console.log(ip.match(ipRegExp));
+
+/* ################# Aula 06 ################# */
+// ^ ~> Começa com
+// $ ~> Termina com
+// [^] ~> Negação
+// m ~> Multiline -> procura em linhas
+
+const { cpf2 } = require('.base');
+
+const cpf = '654.864.841-68';
+const cpfRegExp = /^(\d{3}\.){2}\d{3}\-\d{2}$/gm;
+console.log(cpf2.match(cpfRegExp));
