@@ -134,3 +134,25 @@ console.log(lookahead.match(/(?<=ONLINE\s+).*/gim));
 console.log(lookahead.match(/^.+(?<!ONLINE.+)$/gim));
 
 console.log(cpf2.match(/^(?!^(\d)\1{2}\.\1{3}\.\1{3}-\1{2})\d{3}\.\d{3}\.\d{3}\-\d{2}$/gm));
+
+/* ################# Aula 09 ################# */
+//Encontra todas as palavras
+const palavasRegEx = /([\wÀ-ú]+)/g;
+
+//Não numero
+const naoNumeroRegEx = /\<D/;
+
+//Valida IP
+const ipRegExp = /((25[0-5]|2[0-4][0-9]|1\d{2}|[1-9]\d|\d)(\.)){3}(25[0-5]|2[0-4][0-9]|1\d{2}|[1-9]\d|\d)/g;
+
+//Valida CPF
+const cpfRegExp = /(?:\d{3}\.){2}\d{3}-\d{2}/g;
+
+//Valida telefones
+const validaTelefone = /^(\(\d{2}\)\s*)?(\d{4})-(\d{4})$/g;
+
+//Valida senha fortes
+const validaSenhaFortes = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\]\)]).{8,}$/g;
+
+//Valida e-mail
+const validaEmail = [^\s]+@[^\s]+\.[^\s]+(\w+)*;
