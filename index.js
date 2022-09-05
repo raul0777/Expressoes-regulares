@@ -110,3 +110,27 @@ const { html2 } = require('../aula 00/base');
 //console.log(html2)
 //console.log(html2.match(/<(\w+)[\s\S]*?>[\s\S]*?<\/\1>/g));
 console.log(html2.replace(/(<(\w+)(?:[\s\S]*?)>)([\s\S]*?)(<\/\2>)/g, '$1 HAH $3 HAHA $4'));
+
+/* ################# Aula 08 ################# */
+const { lookahead, cpf2 } = require('./base');
+
+console.log(lookahead);
+
+console.log(lookahead.match(/.+[^in]active$/gim));
+
+//Positive lookahead (frases que tem active)
+console.log(lookahead.match(/.+(?=[^in]active)/gim));
+
+//Positive lookahead (frases que tem inactive)
+console.log(lookahead.match(/.+(?=\s+inactive)/gim));
+
+//Negative lookahead(frases que NÃO tem active)
+console.log(lookahead.match(/^(?!.+[^in]active).+$/gim));
+
+//Positivo lookbehind (frases que começam com ONLINE)
+console.log(lookahead.match(/(?<=ONLINE\s+).*/gim));
+
+//Negative lookbehind (frases que NÃO começam com ONLINE)
+console.log(lookahead.match(/^.+(?<!ONLINE.+)$/gim));
+
+console.log(cpf2.match(/^(?!^(\d)\1{2}\.\1{3}\.\1{3}-\1{2})\d{3}\.\d{3}\.\d{3}\-\d{2}$/gm));

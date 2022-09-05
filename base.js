@@ -53,6 +53,7 @@ Os IP's são:
 
 /* ################# Aula 06 ################# */
 const cpf2 = `654.864.841-68
+111.111.111-11
 498.461.648-46
 168.494.165-49
 084.140.781-91`;
@@ -64,6 +65,16 @@ class="teste">
 Olá mundo</p> 
 <p>Olá mundo</p> <div>Sou uma div</div>`;
 
+/* ################# Aula 08 ################# */
+const lookahead = `
+  ONLINE 192.168.0.1 ABCDEF inactive
+  OFFLINE 192.168.0.2 ABCDEF active
+  ONLINE 192.168.0.3 ABCDEF active
+  ONLINE 192.168.0.4 ABCDEF active
+  OFFLINE 192.168.0.5 ABCDEF active
+  OFFLINE 192.168.0.6 ABCDEF inactive
+`;
+
 module.exports = {
   texto,
   arquivos,
@@ -72,5 +83,6 @@ module.exports = {
   cpf,
   ip,
   cpf2,
-  html2
+  html2,
+  lookahead
 }
